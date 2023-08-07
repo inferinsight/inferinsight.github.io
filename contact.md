@@ -4,13 +4,4 @@ layout: contact
 description: Contact
 ---
 
-Lorem markdownum aequalis strigis. Saetigeri iubeas, vultu huic alvum nondum de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae crimen habet Priamum nec.
-
-| Day       | Opening Hours   |
-| --------- | --------------- |
-| Tuesday   | 8:30am - 5:00pm |
-| Wednesday | 8:30am - 5:00pm |
-| Thursday  | 8:30am - 5:00pm |
-| Friday    | 8:30am - 5:00pm |
-| Saturday  | 10:am - 4:00pm  |
-| Saturday  | Closed          |
+Connecting with us is seamless and straightforward. Whether you're seeking tailored solutions, have inquiries, or wish to explore potential collaborations, reaching us is just a click or call away. Our dedicated customer support team is available around the clock to address your queries and guide you through our offerings. Feel free to drop us a message through the contact form on our website, and we'll ensure a swift response. Alternatively, you can reach us directly at XXX XXX XXX XXXX to speak with one of our representatives who will be delighted to assist you. At InferInsight, we prioritize your communication and look forward to the opportunity to engage with you.
