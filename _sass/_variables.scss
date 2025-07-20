@@ -1,24 +1,72 @@
-/**
- * Set up here the general appearance of the theme.
- */
+// Theme overrides for Bootstrap variables
+// 
+// Compare with bootstrap/_variables.scss
+// Only include variables that are overwritten
+// or variables (indicated with !default) that are referred by other variables.
 
-$themeColor: map-get($theme, themeColor) !default;
-$primaryDark: map-get($theme, primaryDark) !default;
-$accentDark: map-get($theme, accentDark) !default;
-$lightGray: map-get($theme, lightGray) !default;
-$texts: map-get($theme, texts) !default;
+// Color system
 
-// Breakpoints
-$breakpoints: (
-  sm: 37.5rem
-);
+$primary: $custom_link_color;
+$secondary: $custom_banner_color;
+$footer: $custom_footer_color; // Theme variable
 
-// Margins
-$rowMargin: 10px;
-$itemMargin: 15px;
+// Characters which are escaped by the escape-svg function
+// Options
+// Prefix for :root CSS variables
+// Gradient
+// Spacing
 
-// Sizes
-$itemMinWidth: 300px;
+$spacer: 1rem !default;
 
-// Settings
-$maxItemsPerRow: 6;
+// Position
+// Body
+// Utilities maps
+// Links
+
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// Paragraphs
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Container padding
+// Components
+// Typography
+
+$font-family-base: "Roboto", sans-serif;
+
+$headings-margin-bottom: $spacer;
+
+// Tables
+// Buttons + Forms
+// Buttons
+// Forms
+// Form validation
+// Z-index master list
+// Navs
+// Navbar
+// Dropdowns
+// Pagination
+// Placeholders
+// Cards
+// Accordion
+// Tooltips
+// Popovers
+// Toasts
+// Badges
+
+$badge-font-weight: normal;
+
+// Modals
+// Alerts
+// Progress bars
+// List group
+// Image thumbnails
+// Figures
+// Breadcrumbs
+// Carousel
+// Spinners
+// Close
+// Offcanvas
+// Code
