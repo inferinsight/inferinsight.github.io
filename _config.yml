@@ -1,56 +1,113 @@
-# SITE SETTINGS
-title: Petridish                        # Title in top navigation bar (navbar) and <head>
-author: Peter Desmet                    # Used for copyright statement in footer
-baseurl: "/petridish"                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
-                                        # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
-                                        # A baseurl affects internal links, see http://peterdesmet.com/petridish/markdown/#links
+# Site Settings
+name: Jekflix
+title: Jekflix | A blog theme for Jekyll
+description: Jekflix is a template for Jekyll inspired by Netflix and made by
+  Thiago Rossener.
+tags:
+  - blog
+  - template
+  - jekyll
+  - theme
+  - netlify
+show_hero: true
+menu:
+  - title: Home
+    url: /
+  - title: About
+    url: /about
+  - title: Contact
+    url: /contact
+  - title: Feed
+    url: /feed.xml
+email: youremail@test.com
+# See: https://disqus.com/
+disqus_username: disqus_username
+# Contact Form Setting
+# See: https://formspree.io/
+formspree_form_id: formspree_form_id
 
-# SOCIAL PROFILES
-social:
-  email: name@example.com
-  bluesky: bluesky_username.bsky.social
-  mastodon: https://mastodon.social/@mastodon_username
-  twitter: twitter_username
-  linkedin: https://linkedin.com/company/project_name/
-  facebook: https://facebook.com/groups/group_id/
-  github: github_username               # Can also be a github_username/repository
-  disqus: disqus_sitename               # Enable Disqus comments from disqus_sitename.disqus.com
 
-# THEME SETTINGS (ALL OPTIONAL)
-posts_on_home: 2                        # Show x number of latest posts on homepage, can be 0
-archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags
-github_edit: true                       # Show an "edit this page" link in the footer, can also be name of branch (default: main)
-colors:
-  links: "#007bff"                      # Color for links: use a readable color that contrasts well with dark text
-  banner: "#007bff"                     # Background color for page banners: use color that contrasts well with white
-  footer: "#6c757d"                     # Background color for footer: use color that contrasts well with white
-font_serif: true                        # Font type for page content: serif (default) or slightly smaller sans-serif
-rounded_corners: true                   # Enable (default) rounded corners on boxes and buttons
-logo: /assets/theme/images/petri-dish_1f9eb.png # Logo in navbar, will be displayed with 30px height
+# Social Media Settings
+# Remove the item if you don't need it
+github_username: github_username
+facebook_username: facebook_username
+twitter_username: twitter_username
+instagram_username: instagram_username
+linkedin_username: linkedin_username
+medium_username: medium_username
 
-# BUILD SETTINGS
+
+# Posts Settings
+show_time_bar: true
+show_modal_on_exit: false
+show_modal_on_finish_post: true
+two_columns_layout: true
+
+
+# Advanced Settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+google_analytics: "UA-XXXXXXXX-X"
+language: "en"
+categories_folder: category
+sent_message_url: "/contact/message-sent/"
+
+
+# Build settings
 markdown: kramdown
-plugins:                                # If you build your site on gh-pages, only use these plugins: https://pages.github.com/versions/
-  - jekyll-feed
-  - jekyll-sitemap
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - LICENSE
-  - package-lock.json
-  - package.json
-  - jekyll-theme-petridish.gemspec
-  - CITATION.cff
+highlighter: rouge
+permalink: /:title/
+collections:
+  authors:
+    output: true
+paginate_path: "/page/:num/"
+show_get_theme_btn: true
+use_logo: false
 
-# FRONTMATTER DEFAULTS
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default                   # Use default.html layout by default for all files
-  - scope:
-      type: posts
-    values:
-      permalink: "/blog/:year/:slug/"   # Use /blog/yyyy/{filename}/ as permalink for all posts
+# Content paginator
+paginate_content:
+  enabled: true
+  debug: false
+  collections:
+    - posts
+  auto: false
+  separator: "--page-break--"
+  permalink: "/:num/"
+  seo_canonical: true
+  properties:
+    part:
+      is_generated: true
+    last:
+      is_generated: true
+    single:
+      is_generated: true
+
+# SASS
+sass:
+  style: compressed
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-paginate-content
+
+# Exclude my node related stuff
+exclude: [
+  'docs/',
+  'vendor/',
+  'LICENSE',
+  'CHANGELOG.md',
+  'jekflix.gemspec',
+  'package.json',
+  'package-lock.json',
+  'src',
+  'node_modules',
+  'initpost.sh',
+  'Gemfile',
+  'Gemfile.lock',
+  'gulpfile.js',
+  'README.md'
+]
+
+# Theme
+version: v3.1.2
